@@ -1,0 +1,2 @@
+# Stratego
+Stratego game dev
