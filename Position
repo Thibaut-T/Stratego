@@ -1,0 +1,23 @@
+listener() {
+
+		let Plateau = document.getElementById("Plateau")
+
+		for (let line = 0; line < this.map.length; line++) {
+			 
+			for (let k = 0; k < this.map.length; k++) {                                                          //création d'un évenement de type "click" dans chaque case de la grille de jeu
+				
+					 Plateau.rows[line].cells[k].addEventListener('click', () => {
+                    this.click_event(line, k);
+                });
+			}
+		}
+	}
+
+	click_event(pos_x,pos_y) {
+
+		                                                                    
+		this.map[pos_x][pos_y] = 10;
+		console.table(this.map)
+		this.Placement()
+
+	}
