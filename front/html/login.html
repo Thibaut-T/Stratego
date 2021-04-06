@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf8" />
+	<meta name="viewport" content="width=device=width,initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<link rel="icon" href="favicon.png" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>NewAccount</title> 
+</head>
+
+<body class="container-fluid bg-light h-100">
+
+    <div class="row h-20">
+
+        <div class="col jumbotron jumbotron-fluid header text-center" style="background-image: url(/pictures/strategoFin.png); background-size: 100%;">
+         <div class="container for-about">
+             <h1>Stratego</h1>
+         </div>
+     </div>
+ </div>
+ <div class="row">
+    <div class="col"></div>
+    <div class="col-8 border rounded">
+        <form id="formulaire" action="">
+            
+            <div class="row form-group">
+
+                <div class="col">
+                    <label for="pseudo" class="form-label">Pseudo</label>
+                    <input type="pseudo" class="form-control" name="pseudo" id="idpseudo" required />
+                    <!--check si il y a eu un renvoi d'erreur, dans ce cas= affiche le message-->
+                    
+                </div>
+
+            </div>
+
+                 <div class="row form-group">
+                
+                <div class="col">
+                    <label for="room" class="form-label">Nom de room</label>
+                    <input type="room" class="form-control" name="room" id="idroom" required/>
+                    <!--check si il y a eu un renvoi d'erreur, dans ce cas= affiche le message-->
+                    
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="col"></div>
+</div>   
+
+</body>
+<!-- Liens vers les réseux sociaux-->
+<footer style="padding-top:3%;">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col-6">
+            <div class="row mt-2">
+
+                <div class="col">
+                    <a href="https://fr-fr.facebook.com/"><img src="/pictures/fb.jpg" alt="Facebook" style="border-radius:100%;width:50px;"></a>
+                </div>
+                <div class="col">
+                    <a href="https://twitter.com/explore"><img src="/pictures/twitter.jpg" alt="Twitter" style="border-radius:100%;width:50px;"></a>
+                </div>
+                <div class="col">
+                    <a href="https://www.youtube.com/?hl=fr&gl=FR"><img src="/pictures/yt.png" alt="Youtube" style="border-radius:100%;width:50px;"></a>
+                </div>
+                <div class="col">
+                    <a href="https://www.instagram.com/?hl=fr"><img src="/pictures/insta.jpg" alt="Instagram" style="border-radius:100%;width:50px;"></a>
+                </div>
+                <div class="col">
+                    <a href="https://www.pinterest.fr/"><img src="/pictures/pinterest.jpg" alt="Pinterest" style="border-radius:100%;width:50px;"></a>
+                </div>
+                <div class="col">
+                    <a href="https://www.reddit.com/"><img src="/pictures/reddit.jpg" alt="Pinterest" style="border-radius:100%;width:50px;"></a>
+                </div>
+
+            </div>
+            <div class="row">
+                <div class="col">
+                    <p class="text-muted text-center">© 2021 Stratego</p>
+                </div>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</footer>
+
+    <script src="../index.js"></script>
+    <script src="../js/modules/logger.js"></script>
+    <script src="../js/login.js"></script>
+
+</html>
