@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Stratetgo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+	<script type="text/javascript" src="../js/function.js"></script>
+  </head>
+  <body>  <link rel="stylesheet" href="../css/index.css">
+    
+	<div id="win" class="winimg" style="left:9%;"></div>
+	<div id="win2" class="winimg" style="right:9%;position:absolute;"></div>
+	<div id="win3" class="winimg" style="top:10%;right:39%; text-align:center"></div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-9">
+			
+	<table id="Plateau" style="height:500px;">
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black rgb(41, 14, 14);"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+		<tr>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black  black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			<td style="border-color:black black black black;"></td>
+			
+		</tr>
+	</table></br>
+		</div>
+	<div class="col-sm-3">
+	<ul id="messages"></ul>
+	<form id="chatForm" action="" class="form-group">
+		<input id="input" autocomplete="off" class="form-control"/><button class="btn btn-secondary">Send</button>
+	</form>
+	</div>
+
+	<button onclick="regles()" class="btn btn-primary" style="margin-left:300px;">Règles</button>
+	<button onclick="valPions()" class="btn btn-primary" style="margin-left:30px;">Valeur des pions</button>
+	<button id="finPlacementBtn" type="button" style="margin-left:30px;" class="btn btn-primary">Fin placement des pions</button>
+
+
+	<div id="Pions" style="text-align: center;"><p id ="paraPions"></p></div>
+</div>
+</div>
+</body>
+
+<script>
+	let socket = io();
+</script>
+
+
+
+	<script type="text/javascript" src="../js/main.js"></script>
+	
+  </body>
+</html>
